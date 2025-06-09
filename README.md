@@ -1,7 +1,7 @@
 # CSE 151B Competition Spring 2025 - Climate Emulation
 
-This repository contains a starting point for the [CSE 151B](https://sites.google.com/view/cse151b-251b/151b-info) competition on climate emulation.
-It includes a basic PyTorch Lightning training script, a simple CNN model, a data loader for the provided Zarr dataset, a configuration system using Hydra, and a logging system using Weights & Biases.
+This repository contains the top 1 model for the [CSE 151B](https://sites.google.com/view/cse151b-251b/151b-info) competition on climate emulation.
+It includes a temporal model adapted from [Climax](https://github.com/microsoft/ClimaX), a data loader for the provided Zarr dataset, a configuration system using Hydra, and a logging system using Weights & Biases.
 Its structure follows what we find to be useful in our own research projects, but you are free to modify it as needed.
 
 ## | Kaggle Competition Website
