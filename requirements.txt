@@ -1,0 +1,11 @@
+torch>=1.12.0
+lightning>=2.0.0
+xarray>=2022.3.0
+zarr>=2.11.0
+dask>=2022.2.0
+hydra-core>=1.2.0
+omegaconf>=2.2.0
+wandb>=0.13.0
+numpy>=1.22.0
+matplotlib>=3.5.0
+cftime

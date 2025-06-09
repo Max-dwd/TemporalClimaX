@@ -1,0 +1,26 @@
+# @package _global_.trainer
+
+max_epochs: 100  # Specific number of epochs
+accelerator: auto  # Will be auto-detected in code
+devices: auto  # Will be auto-detected in code
+deterministic: true
+num_sanity_val_steps: 0
+precision: 16-mixed
+gradient_clip_val: 1.0
+accumulate_grad_batches: 2
+
+
+# Define callbacks as a list for Hydra instantiation
+callbacks:
+  - _target_: lightning.pytorch.callbacks.ModelCheckpoint  # Save the best model
+    monitor: "val/loss"
+    save_top_k: 1
+    mode: "auto"
+    save_last: false
+    dirpath: "${hydra:runtime.output_dir}/checkpoints"   # Where to save the model
+    filename: "epoch={epoch:02d}-step={step}
+
+    
+  - _target_: lightning.pytorch.callbacks.LearningRateMonitor
+    logging_interval: "epoch"
+

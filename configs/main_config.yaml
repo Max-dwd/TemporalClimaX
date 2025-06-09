@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - data: default
+  - model: TemporalClimaX
+  - training: default
+  - trainer: default
+  - _self_
+
+# Global configs
+seed: 42
+
+# Wandb logging, all arguments are only used if use_wandb is set to true
+use_wandb: true
+wandb_project: null
+wandb_entity: null
+run_name: null
+
+# Path to a checkpoint to load. If set, will load this checkpoint and resume training (evaluation)
+ckpt_path: null 
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

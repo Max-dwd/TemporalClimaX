@@ -1,0 +1,11 @@
+# @package _global_.model
+
+# Model type identifier
+type: TemporalClimaX
+
+time_history: 120           # how many past months the model sees
+patch_size: 8               # 48×72 grid → 6x9 patches
+embed_dim: 512
+spatial_depth: 8                    # spatial encoder depth
+temporal_depth: 4
+heads: 8

@@ -1,0 +1,33 @@
+# @package _global_.data
+
+path: processed_data_cse151b_v2_corrupted_ssp245/processed_data_cse151b_v2_corrupted_ssp245.zarr  # Path to the processed Zarr dataset
+
+input_vars: 
+  - "CO2"
+  - "SO2"
+  - "CH4"
+  - "BC"
+  - "rsdt"
+
+output_vars:
+  - "tas"
+  - "pr"
+target_member_id: [0,1,2]
+
+train_ssps: 
+  - "ssp126"
+  - "ssp370"
+  - "ssp585"
+
+test_ssp: "ssp245"
+test_months: 360
+
+batch_size: 5
+num_workers: 6
+
+#n_months_perseries: 1 # uncomment for rapid testing
+block_len: 120
+val_len: 120
+test_len: 120
+
+stride: 6
